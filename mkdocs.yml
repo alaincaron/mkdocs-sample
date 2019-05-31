@@ -1,5 +1,9 @@
-site_name: Alain's project
+markdown_extensions:
+  - markdown_include.include:
+      base_path: docs
+
+site_name: Copper API
 nav: 
-   - Home: index.md
-   - About: about.md
-theme: readthedocs
+   - Home: 'index.md'
+   - Account And Users: 1.-account-and-users/index.md
+#theme: readthedocs
