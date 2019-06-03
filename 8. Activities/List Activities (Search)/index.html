@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>List Activities (Search) - Copper API</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "List Activities (Search)";
+    var mkdocs_page_input_path = "8. Activities/List Activities (Search).md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Copper API</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Account and Users</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/list-users/">List Users</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Leads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/convert-a-lead/">Convert a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/create-a-new-lead/">Create a New Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/fetch-a-lead-by-id/">Fetch a Lead by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-lead-statuses/">List Lead Statuses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/see-a-leads-activities/">See a Lead's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/update-a-lead/">Update a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/delete-a-lead/">Delete a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/upsert-a-lead/">UPSERT a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-leads-search/">List Leads (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">People</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../3.-people/see-a-persons-activities/">See a Person's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-people-search/">List People (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/create-a-new-person/">Create a New Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/update-a-person/">Update a Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/delete-a-person/">Delete a Person</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Companies</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/delete-a-company/">Delete a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/update-a-company/">Update a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/create-a-new-company/">Create a New Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/see-a-companys-activities/">See a Company's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-companies-search/">List Companies (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Opportunities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipelines/">List Pipelines</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/create-a-new-project/">Create a New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/delete-a-project/">Delete a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/update-a-project/">Update a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/fetch-a-project-by-id/">Fetch a Project by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/list-projects-search/">List Projects (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Custom Fields</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connect fields</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/create-a-connection/">Create a connection</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tasks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/list-tasks-search/">List Tasks (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/create-a-new-task/">Create a New Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/update-a-task/">Update a Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/delete-a-task/">Delete a Task</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Activities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../List Activity Types/">List Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Fetch an Activity by ID/">Fetch an Activity By ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Create a New Activity/">Create a New Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Delete an Activity/">Delete an Activity</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">List Activities (Search)</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#list-activities-search">List Activities (Search)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#headers">Headers</a></li>
+        
+            <li><a class="toctree-l4" href="#example-responses">Example Responses</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Webhooks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/create-new-subscription/">Create new subscription</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/view-subscription-by-id/">View subscription by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/notification-example/">Notification Example</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/list-all-subscriptions/">List all subscriptions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Related Items</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../related-items/relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-related-to-an-entity/">View all records related to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/remove-relationship-between-record-and-entity/">Remove relationship between record and Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Copper API</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Activities &raquo;</li>
+        
+      
+    
+    <li>List Activities (Search)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="list-activities-search">List Activities (Search)</h2>
+<p>The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).</p>
+<p>To see examples of search request using the various parameters, click on the <code>Search Activities</code> dropdown on the right.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent</td>
+<td>hash</td>
+<td>A hash describing the resource to which activities must belong (footnote 1).</td>
+<td></td>
+</tr>
+<tr>
+<td>activity_types</td>
+<td>activity_type[]</td>
+<td>The activity types to filter results on (footnote 1).</td>
+<td>none</td>
+</tr>
+<tr>
+<td>page_number</td>
+<td>number</td>
+<td>The page number (starting with 1) that you would like to view.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>number</td>
+<td>The number of entries included in a page of results</td>
+<td>20</td>
+</tr>
+<tr>
+<td>minimum_activity_date</td>
+<td>number</td>
+<td>The Unix timestamp of the earliest activity date.</td>
+<td>none</td>
+</tr>
+<tr>
+<td>maximum_activity_date</td>
+<td>number</td>
+<td>The Unix timestamp of the latest activity date.</td>
+<td>none</td>
+</tr>
+<tr>
+<td>full_result</td>
+<td>boolean</td>
+<td>(Optional) If set to true, search performance improves but duplicate activity logs may be returned (footnote 3).</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p>Footnotes:
+1. Parent is specified by: {"id": parent_id, "type": parent_type}. "parent_type" can be "lead", "person", "company", "opportunity", "project", "task". 
+2. Activity types is specified by: {"id": activity_type_id, "category": category }. "activity_type_id" and "category" can be retrieved from <code>List Activity Types</code> under <code>Other Resources</code> folder.
+3. If the List Activities Search endpoint is timing out, a flag <code>full_result=true</code> can be added. One can expect to see multiple entries returned for the same activity if an email was sent to multiple users. In order to use this flag, user must have admin capabilities. Otherwise, the flag is ignored.</p>
+<p><code>POST {{base_url}}/activities/search</code></p>
+<h3 id="headers">Headers</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-PW-AccessToken</td>
+<td>{{api_token}}</td>
+<td>undefined</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>X-PW-Application</td>
+<td>developer_api</td>
+<td>undefined</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>X-PW-UserEmail</td>
+<td>{{api_email}}</td>
+<td>undefined</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+<td>undefined</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>### Body</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  &quot;page_size&quot;: 25
+}
+</code></pre>
+
+<h3 id="example-responses">Example Responses</h3>
+<ul>
+<li>Search Activities by Date</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="json">[{&quot;id&quot;:203,&quot;parent&quot;:{&quot;id&quot;:4,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:1,&quot;category&quot;:&quot;system&quot;},&quot;user_id&quot;:2,&quot;details&quot;:null,&quot;activity_date&quot;:1516302332,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1516302332,&quot;date_modified&quot;:1516302332}]
+</code></pre>
+
+<ul>
+<li>Search Activities</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="json">[{&quot;id&quot;:3064242278,&quot;parent&quot;:{&quot;id&quot;:27140359,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:0,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;This is the description of this note&quot;,&quot;activity_date&quot;:1496772355,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1496772355,&quot;date_modified&quot;:1496772355},{&quot;id&quot;:3061844454,&quot;parent&quot;:{&quot;id&quot;:9607580,&quot;type&quot;:&quot;company&quot;},&quot;type&quot;:{&quot;id&quot;:190711,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;This is an update&quot;,&quot;activity_date&quot;:1496710783,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1496710787,&quot;date_modified&quot;:1496710783},{&quot;id&quot;:3061588719,&quot;parent&quot;:{&quot;id&quot;:27140442,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:190711,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;Demo call&quot;,&quot;activity_date&quot;:1496703593,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1496703597,&quot;date_modified&quot;:1496703593},{&quot;id&quot;:3061845284,&quot;parent&quot;:{&quot;id&quot;:9607580,&quot;type&quot;:&quot;company&quot;},&quot;type&quot;:{&quot;id&quot;:190712,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;Sales discussioin&quot;,&quot;activity_date&quot;:1496327400,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1496710806,&quot;date_modified&quot;:1496327400},{&quot;id&quot;:2826555341,&quot;parent&quot;:{&quot;id&quot;:8894157,&quot;type&quot;:&quot;lead&quot;},&quot;type&quot;:{&quot;id&quot;:1,&quot;category&quot;:&quot;system&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:null,&quot;activity_date&quot;:1489019921,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1489019921,&quot;date_modified&quot;:1489019921},{&quot;id&quot;:2826550854,&quot;parent&quot;:{&quot;id&quot;:8894157,&quot;type&quot;:&quot;lead&quot;},&quot;type&quot;:{&quot;id&quot;:1,&quot;category&quot;:&quot;system&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:null,&quot;activity_date&quot;:1489019860,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1489019860,&quot;date_modified&quot;:1489019860},{&quot;id&quot;:2826550639,&quot;parent&quot;:{&quot;id&quot;:8894157,&quot;type&quot;:&quot;lead&quot;},&quot;type&quot;:{&quot;id&quot;:1,&quot;category&quot;:&quot;system&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:null,&quot;activity_date&quot;:1489019856,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1489019856,&quot;date_modified&quot;:1489019856},{&quot;id&quot;:2693189358,&quot;parent&quot;:{&quot;id&quot;:23136297,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:194674,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;Talked with assistant, will be back tomorrow&quot;,&quot;activity_date&quot;:1484706603,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1484706614,&quot;date_modified&quot;:1484706603},{&quot;id&quot;:2693184664,&quot;parent&quot;:{&quot;id&quot;:23136297,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:190711,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;Discussed the new product feature&quot;,&quot;activity_date&quot;:1484706298,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1484706292,&quot;date_modified&quot;:1484706292},{&quot;id&quot;:2677929084,&quot;parent&quot;:{&quot;id&quot;:23136298,&quot;type&quot;:&quot;person&quot;},&quot;type&quot;:{&quot;id&quot;:190711,&quot;category&quot;:&quot;user&quot;},&quot;user_id&quot;:137658,&quot;details&quot;:&quot;ertyfsxcvplkytet&quot;,&quot;activity_date&quot;:1484096559,&quot;old_value&quot;:null,&quot;new_value&quot;:null,&quot;date_created&quot;:1484096557,&quot;date_modified&quot;:1484096557}]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../webhooks/delete-subscription-unsubscribe/" class="btn btn-neutral float-right" title="Delete subscription (unsubscribe)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Delete an Activity/" class="btn btn-neutral" title="Delete an Activity"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Delete an Activity/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../webhooks/delete-subscription-unsubscribe/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

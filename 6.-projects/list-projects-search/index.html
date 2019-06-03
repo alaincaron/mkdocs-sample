@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>List Projects (Search) - Copper API</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "List Projects (Search)";
+    var mkdocs_page_input_path = "6.-projects/list-projects-search.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Copper API</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Account and Users</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/list-users/">List Users</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Leads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/convert-a-lead/">Convert a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/create-a-new-lead/">Create a New Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/fetch-a-lead-by-id/">Fetch a Lead by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-lead-statuses/">List Lead Statuses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/see-a-leads-activities/">See a Lead's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/update-a-lead/">Update a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/delete-a-lead/">Delete a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/upsert-a-lead/">UPSERT a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../2.-leads/list-leads-search/">List Leads (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">People</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../3.-people/see-a-persons-activities/">See a Person's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-people-search/">List People (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/create-a-new-person/">Create a New Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/update-a-person/">Update a Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/delete-a-person/">Delete a Person</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Companies</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/delete-a-company/">Delete a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/update-a-company/">Update a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/create-a-new-company/">Create a New Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/see-a-companys-activities/">See a Company's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-companies-search/">List Companies (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Opportunities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipelines/">List Pipelines</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create-a-new-project/">Create a New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../delete-a-project/">Delete a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../update-a-project/">Update a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../fetch-a-project-by-id/">Fetch a Project by ID</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">List Projects (Search)</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#list-projects-40search41">List Projects (Search)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#headers">Headers</a></li>
+        
+            <li><a class="toctree-l4" href="#body">Body</a></li>
+        
+            <li><a class="toctree-l4" href="#example-responses">Example Responses</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Custom Fields</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connect fields</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/create-a-connection/">Create a connection</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tasks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/list-tasks-search/">List Tasks (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/create-a-new-task/">Create a New Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/update-a-task/">Update a Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/delete-a-task/">Delete a Task</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Activities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/List Activity Types/">List Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Fetch an Activity by ID/">Fetch an Activity By ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Create a New Activity/">Create a New Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Delete an Activity/">Delete an Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/List Activities (Search)/">List Activities (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Webhooks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/create-new-subscription/">Create new subscription</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/view-subscription-by-id/">View subscription by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/notification-example/">Notification Example</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/list-all-subscriptions/">List all subscriptions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Related Items</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../related-items/relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-related-to-an-entity/">View all records related to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/remove-relationship-between-record-and-entity/">Remove relationship between record and Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Copper API</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Projects &raquo;</li>
+        
+      
+    
+    <li>List Projects (Search)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="list-projects-40search41">List Projects (Search)</h1>
+<p>The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).</p>
+<p>To see examples of search request using the various parameters, click on the <code>Projects Search</code> dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Projects, these fields are: tags, custom dropdown, custom multi-select fields. For an example of how this works, see <code>Search Project by Empty Field</code>. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.</p>
+<p>To search by custom fields, see <code>Search Entity by Custom Field</code> under <code>Custom Fields</code> folder.</p>
+<p>To change the number of records returned, change the "page_size" parameter. E.g., specify 200 for a page size of 200 records.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Details</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">page_number</td>
+<td align="left">number</td>
+<td align="left">The page number (starting with 1) that you would like to view.</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">page_size</td>
+<td align="left">number</td>
+<td align="left">The number of entries included in a page of results</td>
+<td align="left">20</td>
+</tr>
+<tr>
+<td align="left">sort_by</td>
+<td align="left">string</td>
+<td align="left">The field on which to sort the results (see footnote 1).</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left">sort_direction</td>
+<td align="left">string</td>
+<td align="left">The direction in which to sort the results. Possible values are: asc or desc.</td>
+<td align="left">asc</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">Full name of the Opportunity to search for.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">assignee_ids</td>
+<td align="left">number[]</td>
+<td align="left">The ids of Users that Opportunities must be owned by, or -2 for Opportunities with no owner.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">status_ids</td>
+<td align="left">number[]</td>
+<td align="left">An array of Opportunity status IDs.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">string[]</td>
+<td align="left">Filter Opportunities to those that match at least one of the tags specified.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">followed</td>
+<td align="left">number</td>
+<td align="left">1: followed, 2: not followed</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_created_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the earliest date Opportunities are created.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_created_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the latest date Opportunities are created.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_modified_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the earliest date Opportunities are modified.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_modified_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the latest date Opportunities are modified.</td>
+<td align="left">none</td>
+</tr>
+</tbody>
+</table>
+<p>Foonotes: 1. Possible fields are: name, assigned_to, related_to, status, date_modified, date_created.</p>
+<p><code>POST {{base_url}}/projects/search</code></p>
+<h2 id="headers">Headers</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">X-PW-AccessToken</td>
+<td align="left"></td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">X-PW-Application</td>
+<td align="left">developer_api</td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">X-PW-UserEmail</td>
+<td align="left"></td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">Content-Type</td>
+<td align="left">application/json</td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+</tbody>
+</table>
+<h2 id="body">Body</h2>
+<pre><code class="text">{
+  &quot;page_size&quot;: 25,
+  &quot;sort_by&quot;: &quot;name&quot;
+}
+</code></pre>
+
+<h2 id="example-responses">Example Responses</h2>
+<ul>
+<li>Search Projects by Custom Multi-Select Dropdown Set to Empty</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:2,&quot;name&quot;:&quot;Test Project&quot;,&quot;related_resource&quot;:null,&quot;assignee_id&quot;:2,&quot;status&quot;:&quot;Open&quot;,&quot;details&quot;:null,&quot;tags&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:8,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:11,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:9,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:7,&quot;value&quot;:false},{&quot;custom_field_definition_id&quot;:3,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:4,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:10,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:5,&quot;value&quot;:null}],&quot;date_created&quot;:1516751006,&quot;date_modified&quot;:1516751006}]
+</code></pre>
+
+<ul>
+<li>Projects Search</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 13358412,
+        &quot;name&quot;: &quot;Demo Company&quot;,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;123 Main St&quot;,
+            &quot;city&quot;: &quot;San Francisco&quot;,
+            &quot;state&quot;: &quot;CA&quot;,
+            &quot;postal_code&quot;: &quot;94105&quot;,
+            &quot;country&quot;: null
+        },
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: null,
+        &quot;details&quot;: &quot;This is a demo company&quot;,
+        &quot;email_domain&quot;: &quot;democompany.com&quot;,
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;415-123-45678&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://democompany.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1496707930,
+        &quot;date_modified&quot;: 1496707932
+    },
+    {
+        &quot;id&quot;: 9607580,
+        &quot;name&quot;: &quot;Dunder Mifflin (sample)&quot;,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main Street&quot;,
+            &quot;city&quot;: &quot;Scranton&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18501&quot;,
+            &quot;country&quot;: &quot;&quot;
+        },
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: null,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email_domain&quot;: &quot;dundermifflin.com&quot;,
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;4153554776&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com/index.shtml&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://www.nbcstore.com/shop-by-show/the-office.html?shop_by_theme=7&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            },
+            {
+                &quot;url&quot;: &quot;http://dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 2,
+        &quot;date_created&quot;: 1483988828,
+        &quot;date_modified&quot;: 1496710807
+    },
+    {
+        &quot;id&quot;: 13362547,
+        &quot;name&quot;: &quot;New Demo Opportunity&quot;,
+        &quot;address&quot;: null,
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: null,
+        &quot;details&quot;: null,
+        &quot;email_domain&quot;: null,
+        &quot;phone_numbers&quot;: [],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1496713616,
+        &quot;date_modified&quot;: 1496713616
+    },
+    {
+        &quot;id&quot;: 13362760,
+        &quot;name&quot;: &quot;New Demo Project&quot;,
+        &quot;address&quot;: null,
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: null,
+        &quot;details&quot;: null,
+        &quot;email_domain&quot;: null,
+        &quot;phone_numbers&quot;: [],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1496713797,
+        &quot;date_modified&quot;: 1496713797
+    },
+    {
+        &quot;id&quot;: 13349319,
+        &quot;name&quot;: &quot;Noemail&quot;,
+        &quot;address&quot;: null,
+        &quot;assignee_id&quot;: 137658,
+        &quot;contact_type_id&quot;: 451490,
+        &quot;details&quot;: null,
+        &quot;email_domain&quot;: &quot;noemail.com&quot;,
+        &quot;phone_numbers&quot;: [],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: &quot;Text fields are 255 chars or less!&quot;
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: &quot;Text area fields can have long text content&quot;
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1496694264,
+        &quot;date_modified&quot;: 1496713841
+    },
+    {
+        &quot;id&quot;: 9607579,
+        &quot;name&quot;: &quot;Copper&quot;,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;221 Main Street Suite 1350&quot;,
+            &quot;city&quot;: &quot;San Francisco&quot;,
+            &quot;state&quot;: &quot;CA&quot;,
+            &quot;postal_code&quot;: &quot;94105&quot;,
+            &quot;country&quot;: &quot;&quot;
+        },
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: 451493,
+        &quot;details&quot;: &quot;Overview: ProsperWorks is the world's first zero input CRM. Designed specifically for Google Apps, ProsperWorks helps companies sell more faster by identifying, organizing and tracking sales opportunities right in Gmail, Calendar and Google Drive. By removing the need for data entry, salespeople can focus on developing business and managers can finally have accurate forecasting with real time activity tracking. ProsperWorks was founded by Jon Lee, Kelly Cheng and Andrew Hu with the commitment to empower small business sales and marketing. Jon was Founder/CEO of three big data companies that solved optimization problems in advertising, gaming and photo sharing. Each company realized successful exits. The team also includes the leaders in engineering and product from Facebook Mobile, BaseCRM and Salesforce. ProsperWorks has raised $10 million in funding from True Ventures, Bloomberg Beta, Crunchfund and other high-profile angel investors. ProsperWorks is based in San Francisco, CA.\n\nApprox. Number of Employees: 30\n\nFounded: 2011\n\nKeywords: Automotive, CRM, Finance, Google, Google Apps, Leadership, Management, Podcasting, SAAS, Sales, Small Business&quot;,
+        &quot;email_domain&quot;: &quot;copper.com&quot;,
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;4153554776&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;socials&quot;: [
+            {
+                &quot;url&quot;: &quot;https://www.linkedin.com/company/copper-inc-&quot;,
+                &quot;category&quot;: &quot;linkedin&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://twitter.com/Copper&quot;,
+                &quot;category&quot;: &quot;twitter&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://www.facebook.com/Copper&quot;,
+                &quot;category&quot;: &quot;facebook&quot;
+            },
+            {
+                &quot;url&quot;: &quot;http://klout.com/Copper&quot;,
+                &quot;category&quot;: &quot;klout&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://angel.co/copper&quot;,
+                &quot;category&quot;: &quot;other&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://plus.google.com/u/0/103594665195397142807&quot;,
+                &quot;category&quot;: &quot;other&quot;
+            },
+            {
+                &quot;url&quot;: &quot;http://www.crunchbase.com/organization/copper&quot;,
+                &quot;category&quot;: &quot;other&quot;
+            }
+        ],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;www.copper.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            },
+            {
+                &quot;url&quot;: &quot;https://www.copper.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1483988828,
+        &quot;date_modified&quot;: 1489018922
+    },
+    {
+        &quot;id&quot;: 9607581,
+        &quot;name&quot;: &quot;Sabre Inc (sample)&quot;,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;543 Washington Ave&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;19135&quot;,
+            &quot;country&quot;: &quot;&quot;
+        },
+        &quot;assignee_id&quot;: null,
+        &quot;contact_type_id&quot;: null,
+        &quot;details&quot;: null,
+        &quot;email_domain&quot;: null,
+        &quot;phone_numbers&quot;: [],
+        &quot;socials&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;websites&quot;: [],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 100764,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 103481,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;interaction_count&quot;: 0,
+        &quot;date_created&quot;: 1483988828,
+        &quot;date_modified&quot;: 1489018922
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Projects by Tags</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516747365
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Projects by Custom Multi-Select Dropdown</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516747365
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Projects by Statuses</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516747365
+    }
+]
+</code></pre>
+
+<ul>
+<li>List Projects in Groups of 200</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516819000
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Test Project&quot;,
+        &quot;related_resource&quot;: null,
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: null,
+        &quot;tags&quot;: [],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: []
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1516751006,
+        &quot;date_modified&quot;: 1516751006
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Projects by Assignee Ids</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516747365
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Projects by Custom Date Field</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Customize Your New CRM&quot;,
+        &quot;related_resource&quot;: {
+            &quot;id&quot;: 2,
+            &quot;type&quot;: &quot;company&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;status&quot;: &quot;Open&quot;,
+        &quot;details&quot;: &quot;Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.&quot;,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 8,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 11,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 9,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 7,
+                &quot;value&quot;: false
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 3,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 4,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 10,
+                &quot;value&quot;: null
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 5,
+                &quot;value&quot;: null
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516747365
+    }
+]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../custom-fields/general/list-all-custom-activity-types/" class="btn btn-neutral float-right" title="List All Custom Activity Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../fetch-a-project-by-id/" class="btn btn-neutral" title="Fetch a Project by ID"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../fetch-a-project-by-id/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../custom-fields/general/list-all-custom-activity-types/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

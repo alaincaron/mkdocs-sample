@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Home - Alain's project</title>
+  <title>Home - Copper API</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Alain's project</a>
+        <a href="." class="icon icon-home"> Copper API</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -53,13 +53,27 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+    <li class="toctree-l2"><a href="#copper-developer-api">Copper Developer API</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#commands">Commands</a></li>
+            <li><a class="toctree-l3" href="#authentication">Authentication</a></li>
         
-            <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
+            <li><a class="toctree-l3" href="#requests">Requests</a></li>
+        
+            <li><a class="toctree-l3" href="#responses">Responses</a></li>
+        
+            <li><a class="toctree-l3" href="#search">Search</a></li>
+        
+            <li><a class="toctree-l3" href="#paginating-search-results">Paginating search results</a></li>
+        
+            <li><a class="toctree-l3" href="#best-practices">Best practices</a></li>
+        
+            <li><a class="toctree-l3" href="#embedded-apps">Embedded Apps</a></li>
+        
+            <li><a class="toctree-l3" href="#appendix">Appendix</a></li>
+        
+            <li><a class="toctree-l3" href="#getting-support">Getting Support</a></li>
         
         </ul>
     
@@ -69,7 +83,393 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="about/">About</a>
+    <span class="caption-text">Account and Users</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="1.-account-and-users/list-users/">List Users</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Leads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="2.-leads/convert-a-lead/">Convert a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/create-a-new-lead/">Create a New Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/fetch-a-lead-by-id/">Fetch a Lead by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/list-lead-statuses/">List Lead Statuses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/see-a-leads-activities/">See a Lead's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/update-a-lead/">Update a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/delete-a-lead/">Delete a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/upsert-a-lead/">UPSERT a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="2.-leads/list-leads-search/">List Leads (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">People</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="3.-people/see-a-persons-activities/">See a Person's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/list-people-search/">List People (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/create-a-new-person/">Create a New Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/update-a-person/">Update a Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="3.-people/delete-a-person/">Delete a Person</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Companies</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="4.-companies/delete-a-company/">Delete a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/update-a-company/">Update a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/create-a-new-company/">Create a New Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/see-a-companys-activities/">See a Company's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="4.-companies/list-companies-search/">List Companies (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Opportunities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-pipelines/">List Pipelines</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="6.-projects/create-a-new-project/">Create a New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="6.-projects/delete-a-project/">Delete a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="6.-projects/update-a-project/">Update a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="6.-projects/fetch-a-project-by-id/">Fetch a Project by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="6.-projects/list-projects-search/">List Projects (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Custom Fields</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connect fields</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="custom-fields/connect-fields/create-a-connection/">Create a connection</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tasks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="7.-tasks/list-tasks-search/">List Tasks (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="7.-tasks/create-a-new-task/">Create a New Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="7.-tasks/update-a-task/">Update a Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="7.-tasks/delete-a-task/">Delete a Task</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Activities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="8. Activities/List Activity Types/">List Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="8. Activities/Fetch an Activity by ID/">Fetch an Activity By ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="8. Activities/Create a New Activity/">Create a New Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="8. Activities/Delete an Activity/">Delete an Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="8. Activities/List Activities (Search)/">List Activities (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Webhooks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="webhooks/create-new-subscription/">Create new subscription</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="webhooks/view-subscription-by-id/">View subscription by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="webhooks/notification-example/">Notification Example</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="webhooks/list-all-subscriptions/">List all subscriptions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Related Items</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="related-items/relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="related-items/view-all-records-related-to-an-entity/">View all records related to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="related-items/remove-relationship-between-record-and-entity/">Remove relationship between record and Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="related-items/view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -82,7 +482,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Alain's project</a>
+        <a href=".">Copper API</a>
       </nav>
 
       
@@ -104,21 +504,211 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+                <h1 id="copper-developer-api">Copper Developer API</h1>
+<p>The Copper Web API allows you to access and build your own applications that interact with Copper in more complex ways than the integrations we provide out of the box.</p>
+<p>The Copper Developer API ("Dev API") provides a RESTful interface with JSON-formatted responses to access most Copper resources. We are continuously working on expanding our API functionality, so stay tuned!</p>
+<h2 id="authentication">Authentication</h2>
+<p>The Dev API uses a token based authentication. You have to include the token in the header of every request, along with the email address of the user who generated the token. Each Copper user can generate API keys and can have multiple valid tokens at the same time. Admins can see all user generated tokens.</p>
+<p>To generate an API token, in the Copper web app go to System settings &gt; API Keys and click the 'CREATE A KEY' button. Copper allows you to label each key for its unique purpose. You'll need to generate an API key to make an API Request.</p>
+<h2 id="requests">Requests</h2>
+<p><strong>Encryption</strong></p>
+<p>All requests must be sent using HTTPS with TLS 1.2 or higher. Please make sure your developer tools support this version of TLS as older versions or SSL are not supported for security reasons.</p>
+<p><strong>Headers</strong></p>
+<p>All Copper API calls must include the following headers to authenticate the request:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">X-PW-AccessToken</td>
+<td align="left"><em>API Key</em></td>
+</tr>
+<tr>
+<td align="left">X-PW-Application</td>
+<td align="left">"developer_api"</td>
+</tr>
+<tr>
+<td align="left">X-PW-UserEmail</td>
+<td align="left"><em>Email address of token owner</em></td>
+</tr>
+<tr>
+<td align="left">Content-Type</td>
+<td align="left">"application/json"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body</strong></p>
+<p>For PUT or POST requests (e.g. create, update, search), the request parameters must be provided as JSON in the request body.</p>
+<p><strong>Rate limits</strong></p>
+<p>All API calls are limited to 600 requests every 10 minutes. There is also a burst mode limit of 36 requests every 6 seconds that takes precedence over the regular API rate limit. Once either limit has been reached, calls will return and error with status code 429. This rate limit is evaluated on rolling 6 second and 10 minute windows, respectively.</p>
+<h2 id="responses">Responses</h2>
+<p>Responses use the customary <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status codes</a>, with the most typical ones being:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><em>Successful Responses</em></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">200</td>
+<td align="left">OK</td>
+</tr>
+<tr>
+<td align="left"><em>Error Responses</em></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">400</td>
+<td align="left">Bad Request</td>
+</tr>
+<tr>
+<td align="left">401</td>
+<td align="left">Unauthorized</td>
+</tr>
+<tr>
+<td align="left">429</td>
+<td align="left">Too many requests</td>
+</tr>
+<tr>
+<td align="left">500</td>
+<td align="left">Internal Server Error</td>
+</tr>
+</tbody>
+</table>
+<p>Each of the entities in the Dev API (Leads, People, etc.) has a '/search' endpoint. For requests sent to '/search' endpoints, the response header contains a field called 'X-PW-TOTAL'. This value represents an upper bound of the total number of records returned in the search query. It allows the developer to estimate roughly how long it would take to extract the data when the results are paginated (See Paginating Search Results section).</p>
+<h2 id="search">Search</h2>
+<p><strong>Search by Phone Number</strong></p>
+<p>There are two types of phone number search, fuzzy and partial. The difference is in the way the input is permuted prior to search. In general, fuzzy search returns more results, but partial search returns results that are closer to what the user entered. Let's illustrate from an example. Suppose the user enters "408-555-1234". In either search, non-numeric characters are stripped first.</p>
+<p>Partial Search: "4085551234" is searched in the database for all records that have phone numbers that end in "4085551234". This includes entities with phone numbers such as "4085551234", "1-4085551234", "123-4085551234", etc.</p>
+<p>Fuzzy Search: "4085551234" is permuted first by stripping 1-6 digits from the beginning of the sequence. If the resulting sequence is less than 6 digits long, it is dropped from the search. In this case, the search string set is "4085551234", "085551234", "85551234", "5551234", "551234". Any records in the database where the phone number ends in the string set is returned. The query results form fuzzy match includes results from the partial search and many more ambiguous results. For example, records with phone number such as "5105551234" would also be returned.</p>
+<p>To designate the type of phone number search, specify the "match" field when entering the phone number in the search request body. E.g.,</p>
+<p>{ "phone_number": { "value": "5551234", "match": "partial" } }</p>
+<p>Match scheme is partial if the input string is 6 digits or fewer. For an input string 7 digits or more, the default behavior is fuzzy search if a match scheme is not specified.</p>
+<h2 id="paginating-search-results">Paginating search results</h2>
+<p>Our /search endpoints return multiple records per response. How many records are included in a single response (=page size) is determined by an optional search parameter called "page_size". The default value for "page_size" is 20, and its value can be set to any integer between 1 and 200. When the search criteria match more records than what fits on a single page then you have to paginate the search results using one of the following strategies in order to get all the records that match your search.</p>
+<h3 id="strategy-1-calculate-the-number-of-pages">Strategy 1: Calculate the number of pages</h3>
+<p>Every response from a /search endpoint has a field in the response header called 'X-PW-TOTAL'. It shows an upper bound of the total number of records that match the search criteria.</p>
+<p>To calculate the number of pages to cycle thru, divide the total number of records by the page size. For the sake of example, let's assume that the page size is 200 and the total number of records is 775. The number of pages is 775/200 = 3.875 which rounded up to the nearest integer gives us 4 pages.</p>
+<p>Now, to cycle thru the pages we need to set the "page_number" parameter in the request to 1 initially, and then send additional requests for the subsequent pages.</p>
+<p>The request header will look like this:</p>
+<p><em>For the first page</em></p>
+<p>{</p>
+<p>...</p>
+<p>"page_size": 200,</p>
+<p>"page_number": 1</p>
+<p>...</p>
+<p>}</p>
+<p><em>For the second page</em></p>
+<p>{</p>
+<p>...</p>
+<p>"page_size": 200,</p>
+<p>"page_number": 2</p>
+<p>...</p>
+<p>}</p>
+<p>and so on.</p>
+<p>This strategy has one caveat; if records are added/modified in the system between the time when the header field is evaluated and when the actual pages are requested then those records may be included or omitted in/from the results incorrectly.</p>
+<h3 id="strategy-2-count-the-records-on-each-page">Strategy 2: Count the records on each page</h3>
+<p>In this scenario, we send a search request and specify the first page, by setting "page_number" to 1. Then use a logic that performs the following evaluation on the response.</p>
+<ol>
+<li>Count the number of records in the response</li>
+<li>Check if the record count equals the page_size</li>
+<li>a. If the record is less than the page size then we are on the last page and we can stop paginating</li>
+<li>b. If the record count equals the page size then increase "page_size" by one, send another request and start over with this evaluation logic.</li>
+</ol>
+<p>Using the same example as above, with a page size of 200 and 775 total records the evaluation would go down as follows</p>
+<p><em>Page 1</em></p>
+<p>{</p>
+<p>...</p>
+<p>"page_size": 200,</p>
+<p>"page_number": 1</p>
+<p>...</p>
+<p>}</p>
+<p>The response will have 200 records which equals the page size, so let's continue requesting.</p>
+<p><em>Page 2</em></p>
+<p>{</p>
+<p>...</p>
+<p>"page_size": 200,</p>
+<p>"page_number": 2</p>
+<p>...</p>
+<p>}</p>
+<p>The response will have 200 records which equals the page size, so let's continue requesting. The 3rd page will have identical results.</p>
+<p><em>Page 4 (last page)</em></p>
+<p>{</p>
+<p>...</p>
+<p>"page_size": 200,</p>
+<p>"page_number": 4</p>
+<p>...</p>
+<p>}</p>
+<p>The response will have 175 records, which is LESS than the page size, which tells us we are on the last page and we can stop paginating.</p>
+<h3 id="remember-to-sort-you-search-results">Remember to sort you search results!</h3>
+<p>It is highly recommended that you sort the results you get back from a /search endpoint. This ensures that records are returned in a consistent fashion across requests. One common sorting scenario is to sort records by the date they were last updated, in a descending order. For this sorting please add the following parameters to the search request:</p>
+<p>{</p>
+<p>...</p>
+<p>"sort_by": "date_modified",</p>
+<p>"sort_direction": "desc"</p>
+<p>...</p>
+<p>}</p>
+<h2 id="best-practices">Best practices</h2>
+<p><strong>Date formats</strong></p>
+<p>Date formats are in Unix Timestamp format and values are set and returned as 10 digit long integers (For example {"date_created": 1483988828}). There are a few notable exceptions, however. The "close_date" on Opportunities, Task Due Dates and Reminder dates, and custom date fields use an ISO "mm/dd/yyyy" format for setting and returning date values.</p>
+<p><strong>The API respects Team Permissions</strong></p>
+<p>A user's access to records in Copper may be restricted by Team Permission settings. The Dev API respects team permissions. It is recommended to use the API credentials of an admin user when using the Dev API because Admins have unrestricted data access.</p>
+<p><strong>Create a Developer User</strong></p>
+<p>If you use the Dev API to create records in Copper, it is advisable to create a separate (non-personal) user just for integration purposes. Generate API credentials for this user and use those for integration. This way records created thru the Dev API will be owned by this integration user and can be filtered accordingly.</p>
+<p><strong>Entity ID scopes</strong></p>
+<p>Unique identifiers are unique within the scope of a single resource type. For example, a given identifier for a Lead will never be assigned to a different Lead, but a different resource such as a Person could use the same identifier.</p>
+<p><strong>File Upload</strong></p>
+<p>Currently, the Developer API does not allow for file uploads. There is a workaround available.</p>
+<ol>
+<li>Create a custom URL field.</li>
+<li>Upload your file to Google Drive.</li>
+<li>Push the created file link into your Copper custom URL field.</li>
+</ol>
+<h2 id="embedded-apps">Embedded Apps</h2>
+<p>Embedded Integrations lets you easily display an integration you've built in the Copper web app. <a href="https://docs.copper.com/pw-app-sdk/">Working with our SDK</a>, you can create and embed your own app in Copper in just a few clicks. To join the beta, click <a href="https://docs.google.com/forms/d/1tEgGLqAeYQ2PFmkaiwGEBRNGcpDBrK7zKvd2XXtqoIw/viewform?edit_requested=true">here</a>.</p>
+<p>For more info on embedded apps, please go <a href="https://support.copper.com/hc/en-us/articles/360001624708-Working-with-Embedded-Integrations-BETA-">here</a>.</p>
+<h2 id="appendix">Appendix</h2>
+<p><strong>Categories</strong></p>
+<p>When creating or updating entities such as leads or people, there are fields where value and category can be specified. These fields include email, phone, social, and website. Below are the valid categories for each of these fields.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Categories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Email</td>
+<td align="left">work, personal, other</td>
+</tr>
+<tr>
+<td align="left">Phone</td>
+<td align="left">mobile, work, home, other</td>
+</tr>
+<tr>
+<td align="left">Social</td>
+<td align="left">linkedin, twitter, googleplus, facebook, youtube, quora, foursquare, klout, gravatar, other</td>
+</tr>
+<tr>
+<td align="left">Website</td>
+<td align="left">work, personal, other</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-support">Getting Support</h2>
+<p>For code samples, please visit <a href="https://support.copper.com/hc/en-us/articles/115000816826-Code-samples-and-tips">Code Samples</a>.</p>
+<p>For API questions and support, please <a href="https://support.prosperworks.com/hc/en-us/requests/new">Submit a request</a> or post your question in our <a href="https://support.prosperworks.com/hc/en-us/community/topics/201113143-ProsperWorks-API-Developer-Forum">Developer Forum</a>.</p>
               
             </div>
           </div>
@@ -126,7 +716,7 @@ docs/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="1.-account-and-users/fetch-account-details/" class="btn btn-neutral float-right" title="Fetch Account Details">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -154,7 +744,7 @@ docs/
       
       
       
-        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="1.-account-and-users/fetch-account-details/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
@@ -167,5 +757,5 @@ docs/
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-05-31 19:49:20
+Build Date UTC : 2019-06-03 15:11:39
 -->

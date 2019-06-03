@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>List Leads (Search) - Copper API</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "List Leads (Search)";
+    var mkdocs_page_input_path = "2.-leads/list-leads-search.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Copper API</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Account and Users</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../1.-account-and-users/list-users/">List Users</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Leads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../convert-a-lead/">Convert a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../create-a-new-lead/">Create a New Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../fetch-a-lead-by-id/">Fetch a Lead by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../list-lead-statuses/">List Lead Statuses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../see-a-leads-activities/">See a Lead's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../update-a-lead/">Update a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../delete-a-lead/">Delete a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../upsert-a-lead/">UPSERT a Lead</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">List Leads (Search)</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#list-leads-40search41">List Leads (Search)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#headers">Headers</a></li>
+        
+            <li><a class="toctree-l4" href="#body">Body</a></li>
+        
+            <li><a class="toctree-l4" href="#example-responses">Example Responses</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">People</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../3.-people/see-a-persons-activities/">See a Person's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-people-search/">List People (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/create-a-new-person/">Create a New Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/update-a-person/">Update a Person</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../3.-people/delete-a-person/">Delete a Person</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Companies</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/delete-a-company/">Delete a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/update-a-company/">Update a Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-contact-types/">List Contact Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/create-a-new-company/">Create a New Company</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/see-a-companys-activities/">See a Company's Activities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../4.-companies/list-companies-search/">List Companies (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Opportunities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-pipelines/">List Pipelines</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-customer-sources/">List Customer Sources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/create-a-new-project/">Create a New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/delete-a-project/">Delete a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/update-a-project/">Update a Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/fetch-a-project-by-id/">Fetch a Project by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../6.-projects/list-projects-search/">List Projects (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Custom Fields</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connect fields</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../custom-fields/connect-fields/create-a-connection/">Create a connection</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tasks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/list-tasks-search/">List Tasks (Search)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/create-a-new-task/">Create a New Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/update-a-task/">Update a Task</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../7.-tasks/delete-a-task/">Delete a Task</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Activities</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/List Activity Types/">List Activity Types</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Fetch an Activity by ID/">Fetch an Activity By ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Create a New Activity/">Create a New Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/Delete an Activity/">Delete an Activity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../8. Activities/List Activities (Search)/">List Activities (Search)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Webhooks</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/create-new-subscription/">Create new subscription</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/view-subscription-by-id/">View subscription by ID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/notification-example/">Notification Example</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/list-all-subscriptions/">List all subscriptions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Related Items</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../related-items/relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-related-to-an-entity/">View all records related to an Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/remove-relationship-between-record-and-entity/">Remove relationship between record and Entity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../related-items/view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Copper API</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Leads &raquo;</li>
+        
+      
+    
+    <li>List Leads (Search)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="list-leads-40search41">List Leads (Search)</h1>
+<p>The /search endpoint provides the ability to list Leads and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).</p>
+<p>To see examples of search request using the various parameters, click on the <code>Leads Search</code> dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Leads, these fields are: city, state, postal_code, tags, custom dropdown, custom multi-select fields. For an example of how this works, see <code>Search Leads by Empty Field</code>. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.</p>
+<p>To search by custom fields, see <code>Search Entity by Custom Field</code> under <code>Custom Fields</code> folder.</p>
+<p>To change the number of records returned, change the "page_size" parameter. E.g., specify 200 for a page size of 200 records.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Details</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">page_number</td>
+<td align="left">number</td>
+<td align="left">The page number (starting with 1) that you would like to view.</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">page_size</td>
+<td align="left">number</td>
+<td align="left">The number of entries included in a page of results</td>
+<td align="left">20</td>
+</tr>
+<tr>
+<td align="left">sort_by</td>
+<td align="left">string</td>
+<td align="left">The field on which to sort the results (see footnote 1).</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left">sort_direction</td>
+<td align="left">string</td>
+<td align="left">The direction in which to sort the results. Possible values are: asc or desc.</td>
+<td align="left">asc</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">Full name of the Lead to search for.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">phone_number</td>
+<td align="left">string</td>
+<td align="left">Phone number of the Lead to search for.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">emails</td>
+<td align="left">string</td>
+<td align="left">Email of the Lead to search for.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">assignee_ids</td>
+<td align="left">number[]</td>
+<td align="left">The ids of Users that Leads are assigned to (see footnote 2).</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">status_ids</td>
+<td align="left">number[]</td>
+<td align="left">An array of Lead status IDs (see footnote 3).</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">customer_source_ids</td>
+<td align="left">number[]</td>
+<td align="left">An array of customer source IDs (see footnote 4).</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">city</td>
+<td align="left">string</td>
+<td align="left">The city in which Leads must be located.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">state</td>
+<td align="left">string</td>
+<td align="left">The state or province in which Leads must be located.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">postal_code</td>
+<td align="left">string</td>
+<td align="left">The postal code in which Leads must be located.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">country</td>
+<td align="left">string</td>
+<td align="left">The two character country code where Leads must be located.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">string[]</td>
+<td align="left">Filter Leads to those that match at least one of the tags specified.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">followed</td>
+<td align="left">number</td>
+<td align="left">1: followed, 2: not followed</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">age</td>
+<td align="left">number</td>
+<td align="left">The maximum age in seconds that each Lead must be.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_monetary_value</td>
+<td align="left">number</td>
+<td align="left">The minimum monetary value Leads must have.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_monetary_value</td>
+<td align="left">number</td>
+<td align="left">The maximum monetary value Leads must have.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_interaction_count</td>
+<td align="left">number</td>
+<td align="left">The minimum number of interactions Leads must have had.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_interaction_count</td>
+<td align="left">number</td>
+<td align="left">The maximum number of interactions Leads must have had.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_interaction_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the earliest date of the last interaction.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_interaction_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the latest date of the last interaction.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_created_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the earliest date Leads are created.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_created_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the latest date Leads are created.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">minimum_modified_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the earliest date Leads are modified.</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">maximum_modified_date</td>
+<td align="left">timestamp</td>
+<td align="left">The Unix timestamp of the latest date Leads are modified.</td>
+<td align="left">none</td>
+</tr>
+</tbody>
+</table>
+<p>Foonotes: 1. Possible fields are: name, first_name, last_name, company_name, title, value, email, phone, date_modified, date_created, city, state, country, zip, inactive_days.</p>
+<ul>
+<li>date_modified and date_created: sorting is from oldest to newest</li>
+<li>inactive_days: sorting is from newest to oldest</li>
+<li>To get User IDs, see <code>List Users</code> under <code>Acount and Users</code> folder. Enter -2 as an ID for no assignee.</li>
+<li>To get lead status IDs, see <code>List Lead Statuses</code> under <code>Other Resources</code> folder.</li>
+<li>To get customer source IDs, see <code>List Customer Sources</code> under <code>Other Resources</code> folder. Enter -2 as an ID for no customer source.</li>
+</ul>
+<p><code>POST {{base_url}}/leads/search</code></p>
+<h2 id="headers">Headers</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">X-PW-AccessToken</td>
+<td align="left"></td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">X-PW-Application</td>
+<td align="left">developer_api</td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">X-PW-UserEmail</td>
+<td align="left"></td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+<tr>
+<td align="left">Content-Type</td>
+<td align="left">application/json</td>
+<td align="left">undefined</td>
+<td align="left">undefined</td>
+</tr>
+</tbody>
+</table>
+<h2 id="body">Body</h2>
+<pre><code class="text">{
+  &quot;page_size&quot;: 25,
+  &quot;sort_by&quot;: &quot;name&quot;
+}
+</code></pre>
+
+<h2 id="example-responses">Example Responses</h2>
+<ul>
+<li>Search Leads by Phone Number</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 1,
+        &quot;monetary_unit&quot;: &quot;USD&quot;,
+        &quot;monetary_value&quot;: 2500,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;New&quot;,
+        &quot;status_id&quot;: 5,
+        &quot;tags&quot;: [
+            &quot;tag1&quot;
+        ],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515800495,
+        &quot;date_last_contacted&quot;: 1515796263
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Leads by Empty Field</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2501,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;blah&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[8]}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1516214189,&quot;date_last_contacted&quot;:1515796263},{&quot;id&quot;:5,&quot;name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;pam@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:5000,&quot;socials&quot;:[],&quot;status&quot;:&quot;Unqualified&quot;,&quot;status_id&quot;:7,&quot;tags&quot;:[&quot;sample&quot;],&quot;title&quot;:&quot;Office Coordinator&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5105553333&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795399,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Status Change Date</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Followed</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Custom Date Field</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515800180,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Interaction Count</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Leads Search</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:9150547,&quot;name&quot;:&quot;My Contact&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Contact&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mycontact@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1490045162,&quot;date_modified&quot;:1490045162},{&quot;id&quot;:9150552,&quot;name&quot;:&quot;My Contact&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Contact&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:null,&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;415-123-45678&quot;,&quot;category&quot;:&quot;mobile&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1490045237,&quot;date_modified&quot;:1490045237},{&quot;id&quot;:9150578,&quot;name&quot;:&quot;My Contact&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Contact&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:null,&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;415-123-45678&quot;,&quot;category&quot;:&quot;mobile&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1490045279,&quot;date_modified&quot;:1490045279},{&quot;id&quot;:8982554,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1489528899,&quot;date_modified&quot;:1489528899},{&quot;id&quot;:8982702,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@gmail.test&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1489531171,&quot;date_modified&quot;:1489531171},{&quot;id&quot;:9094361,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1489791225,&quot;date_modified&quot;:1489791225},{&quot;id&quot;:9094364,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;123456789012345678901234567890&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;123456789012345678901234567890&quot;}],&quot;date_created&quot;:1489791283,&quot;date_modified&quot;:1489791283},{&quot;id&quot;:9094371,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;123456789012345678901234567890&quot;}],&quot;date_created&quot;:1489791417,&quot;date_modified&quot;:1489791417},{&quot;id&quot;:9094372,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5-----&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;123456789012345678901234567890&quot;}],&quot;date_created&quot;:1489791453,&quot;date_modified&quot;:1489791453},{&quot;id&quot;:9094373,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5-----&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------&quot;}],&quot;date_created&quot;:1489791470,&quot;date_modified&quot;:1489791470},{&quot;id&quot;:9094383,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5-----&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------|--------1---------2---------3---------4---------5---------6---------7---------8---------9---------&quot;}],&quot;date_created&quot;:1489791672,&quot;date_modified&quot;:1489791672},{&quot;id&quot;:9174441,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;Text fields are 255 chars or less!&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;text \n text&quot;}],&quot;date_created&quot;:1490112942,&quot;date_modified&quot;:1490112942},{&quot;id&quot;:9174443,&quot;name&quot;:&quot;My Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;My&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:{&quot;email&quot;:&quot;mylead@noemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:&quot;Text fields are 255 chars or less!&quot;},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:&quot;text /n text&quot;}],&quot;date_created&quot;:1490112953,&quot;date_modified&quot;:1490112953},{&quot;id&quot;:8894157,&quot;name&quot;:&quot;Test Lead&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Test&quot;,&quot;last_name&quot;:&quot;Lead&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;301 Howard St Ste 600&quot;,&quot;city&quot;:&quot;San Francisco&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postal_code&quot;:&quot;94105&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:137658,&quot;company_name&quot;:&quot;Lead's Company&quot;,&quot;customer_source_id&quot;:331241,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;address@workemail.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_value&quot;:100,&quot;socials&quot;:[{&quot;url&quot;:&quot;facebook.com/test_lead&quot;,&quot;category&quot;:&quot;facebook&quot;}],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:208231,&quot;tags&quot;:[&quot;tag 1&quot;,&quot;tag 2&quot;],&quot;title&quot;:&quot;Title&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;www.workwebsite.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;415-999-4321&quot;,&quot;category&quot;:&quot;mobile&quot;},{&quot;number&quot;:&quot;415-555-1234&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:100764,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:103481,&quot;value&quot;:null}],&quot;date_created&quot;:1489018784,&quot;date_modified&quot;:1496692911}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Full Name</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[8]}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515800495,&quot;date_last_contacted&quot;:1515796263},{&quot;id&quot;:5,&quot;name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;pam@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:5000,&quot;socials&quot;:[],&quot;status&quot;:&quot;Unqualified&quot;,&quot;status_id&quot;:7,&quot;tags&quot;:[&quot;sample&quot;],&quot;title&quot;:&quot;Office Coordinator&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5105553333&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795399,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by State</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795800,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Tags</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 1,
+        &quot;monetary_unit&quot;: &quot;USD&quot;,
+        &quot;monetary_value&quot;: 2501,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;New&quot;,
+        &quot;status_id&quot;: 5,
+        &quot;tags&quot;: [
+            &quot;blah&quot;
+        ],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [
+            {
+                &quot;custom_field_definition_id&quot;: 6,
+                &quot;value&quot;: 1515744000
+            },
+            {
+                &quot;custom_field_definition_id&quot;: 12,
+                &quot;value&quot;: [
+                    8
+                ]
+            }
+        ],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1516214189,
+        &quot;date_last_contacted&quot;: 1515796263
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Leads by Monetary Value</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: &quot;USD&quot;,
+        &quot;monetary_value&quot;: 2500,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;New&quot;,
+        &quot;status_id&quot;: 5,
+        &quot;tags&quot;: [],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515795399,
+        &quot;date_last_contacted&quot;: null
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Leads by Created Date</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263},{&quot;id&quot;:5,&quot;name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;pam@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:5000,&quot;socials&quot;:[],&quot;status&quot;:&quot;Unqualified&quot;,&quot;status_id&quot;:7,&quot;tags&quot;:[&quot;sample&quot;],&quot;title&quot;:&quot;Office Coordinator&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5105553333&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795399,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Custom Multi-Select Dropdown</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[8]}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515800495,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Email</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2501,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;blah&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[8]}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1516214189,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Postal Code</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795800,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Assignee IDs</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="text">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: null,
+        &quot;monetary_value&quot;: 2500,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;Unqualified&quot;,
+        &quot;status_id&quot;: 7,
+        &quot;tags&quot;: [],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515783705,
+        &quot;date_last_contacted&quot;: null
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Leads by Custom Multi-Select Dropdown Set to Empty</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:5,&quot;name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;pam@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:5000,&quot;socials&quot;:[],&quot;status&quot;:&quot;Unqualified&quot;,&quot;status_id&quot;:7,&quot;tags&quot;:[&quot;sample&quot;],&quot;title&quot;:&quot;Office Coordinator&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5105553333&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795399,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Status IDs</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: null,
+        &quot;monetary_value&quot;: 2500,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;Unqualified&quot;,
+        &quot;status_id&quot;: 7,
+        &quot;tags&quot;: [],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515783705,
+        &quot;date_last_contacted&quot;: null
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Pam Beesly (sample)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Pam Beesly (sample)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: null,
+        &quot;assignee_id&quot;: null,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;pam@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: null,
+        &quot;monetary_value&quot;: 5000,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;Unqualified&quot;,
+        &quot;status_id&quot;: 7,
+        &quot;tags&quot;: [
+            &quot;sample&quot;
+        ],
+        &quot;title&quot;: &quot;Office Coordinator&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5105553333&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515525131,
+        &quot;date_last_contacted&quot;: null
+    }
+]
+</code></pre>
+
+<ul>
+<li>List Leads in groups of 200</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2501,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;blah&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[8]},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:1515744000},{&quot;custom_field_definition_id&quot;:8,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:11,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:9,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:7,&quot;value&quot;:false},{&quot;custom_field_definition_id&quot;:3,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:4,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:10,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:5,&quot;value&quot;:null}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1516743967,&quot;date_last_contacted&quot;:1515796263},{&quot;id&quot;:5,&quot;name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Pam Beesly (sample)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:null,&quot;assignee_id&quot;:null,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;pam@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:5000,&quot;socials&quot;:[],&quot;status&quot;:&quot;Unqualified&quot;,&quot;status_id&quot;:7,&quot;tags&quot;:[&quot;sample&quot;],&quot;title&quot;:&quot;Office Coordinator&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5105553333&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:8,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:11,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:9,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:7,&quot;value&quot;:false},{&quot;custom_field_definition_id&quot;:3,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:4,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:10,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:5,&quot;value&quot;:null}],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795399,&quot;date_last_contacted&quot;:null},{&quot;id&quot;:12,&quot;name&quot;:&quot;Test User&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Test&quot;,&quot;last_name&quot;:&quot;User&quot;,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;123 Abc Rd&quot;,&quot;city&quot;:&quot;San Francisco&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postal_code&quot;:&quot;94114&quot;,&quot;country&quot;:&quot;&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:null,&quot;customer_source_id&quot;:null,&quot;details&quot;:null,&quot;email&quot;:null,&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:null,&quot;monetary_value&quot;:null,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[],&quot;title&quot;:null,&quot;websites&quot;:[],&quot;phone_numbers&quot;:[],&quot;custom_fields&quot;:[{&quot;custom_field_definition_id&quot;:8,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:11,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:9,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:7,&quot;value&quot;:false},{&quot;custom_field_definition_id&quot;:3,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:4,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:12,&quot;value&quot;:[]},{&quot;custom_field_definition_id&quot;:10,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:6,&quot;value&quot;:null},{&quot;custom_field_definition_id&quot;:5,&quot;value&quot;:null}],&quot;date_created&quot;:1516671366,&quot;date_modified&quot;:1516671455,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Country</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795800,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by City</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:0,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515795800,&quot;date_last_contacted&quot;:null}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Customer Source IDs</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Jim Halpert (sample2)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: {
+            &quot;street&quot;: &quot;213 West Main St&quot;,
+            &quot;city&quot;: &quot;Philadelphia&quot;,
+            &quot;state&quot;: &quot;PA&quot;,
+            &quot;postal_code&quot;: &quot;18503&quot;,
+            &quot;country&quot;: &quot;US&quot;
+        },
+        &quot;assignee_id&quot;: 2,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;This is an update&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;jim@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: null,
+        &quot;monetary_value&quot;: 2500,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;New&quot;,
+        &quot;status_id&quot;: 5,
+        &quot;tags&quot;: [],
+        &quot;title&quot;: &quot;Manager&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5104447778&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515786833,
+        &quot;date_last_contacted&quot;: null
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Pam Beesly (sample)&quot;,
+        &quot;prefix&quot;: null,
+        &quot;first_name&quot;: &quot;Pam Beesly (sample)&quot;,
+        &quot;last_name&quot;: null,
+        &quot;middle_name&quot;: null,
+        &quot;suffix&quot;: null,
+        &quot;address&quot;: null,
+        &quot;assignee_id&quot;: null,
+        &quot;company_name&quot;: &quot;Dunder Mifflin, Inc.&quot;,
+        &quot;customer_source_id&quot;: 4,
+        &quot;details&quot;: &quot;A Lead is someone you've qualified as a potential client. When you are ready to start making a deal, simply convert the Lead into an Opportunity.\n\nOnce your Lead becomes an Opportunity, you'll be able to track progress between each stage of the deal making process in your fully customizable Opportunity Pipeline. Add your own Lead and convert it to an Opportunity to see how it works!&quot;,
+        &quot;email&quot;: {
+            &quot;email&quot;: &quot;pam@dundermifflin.com&quot;,
+            &quot;category&quot;: &quot;work&quot;
+        },
+        &quot;interaction_count&quot;: 0,
+        &quot;monetary_unit&quot;: null,
+        &quot;monetary_value&quot;: 5000,
+        &quot;socials&quot;: [],
+        &quot;status&quot;: &quot;Unqualified&quot;,
+        &quot;status_id&quot;: 7,
+        &quot;tags&quot;: [
+            &quot;sample&quot;
+        ],
+        &quot;title&quot;: &quot;Office Coordinator&quot;,
+        &quot;websites&quot;: [
+            {
+                &quot;url&quot;: &quot;http://www.dundermifflin.com&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;phone_numbers&quot;: [
+            {
+                &quot;number&quot;: &quot;5105553333&quot;,
+                &quot;category&quot;: &quot;work&quot;
+            }
+        ],
+        &quot;custom_fields&quot;: [],
+        &quot;date_created&quot;: 1515434872,
+        &quot;date_modified&quot;: 1515525131,
+        &quot;date_last_contacted&quot;: null
+    }
+]
+</code></pre>
+
+<ul>
+<li>Search Leads by Modified Date</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+
+<ul>
+<li>Search Leads by Interaction Date</li>
+</ul>
+<p>200: OK</p>
+<pre><code class="javascript">[{&quot;id&quot;:6,&quot;name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;prefix&quot;:null,&quot;first_name&quot;:&quot;Jim Halpert (sample2)&quot;,&quot;last_name&quot;:null,&quot;middle_name&quot;:null,&quot;suffix&quot;:null,&quot;address&quot;:{&quot;street&quot;:&quot;213 West Main St&quot;,&quot;city&quot;:&quot;Philadelphia&quot;,&quot;state&quot;:&quot;PA&quot;,&quot;postal_code&quot;:&quot;18503&quot;,&quot;country&quot;:&quot;US&quot;},&quot;assignee_id&quot;:2,&quot;company_name&quot;:&quot;Dunder Mifflin, Inc.&quot;,&quot;customer_source_id&quot;:4,&quot;details&quot;:&quot;This is an update&quot;,&quot;email&quot;:{&quot;email&quot;:&quot;jim@dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;},&quot;interaction_count&quot;:1,&quot;monetary_unit&quot;:&quot;USD&quot;,&quot;monetary_value&quot;:2500,&quot;socials&quot;:[],&quot;status&quot;:&quot;New&quot;,&quot;status_id&quot;:5,&quot;tags&quot;:[&quot;tag1&quot;],&quot;title&quot;:&quot;Manager&quot;,&quot;websites&quot;:[{&quot;url&quot;:&quot;http://www.dundermifflin.com&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;phone_numbers&quot;:[{&quot;number&quot;:&quot;5104447778&quot;,&quot;category&quot;:&quot;work&quot;}],&quot;custom_fields&quot;:[],&quot;date_created&quot;:1515434872,&quot;date_modified&quot;:1515796276,&quot;date_last_contacted&quot;:1515796263}]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../3.-people/see-a-persons-activities/" class="btn btn-neutral float-right" title="See a Person's Activities">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../upsert-a-lead-by-custom-field/" class="btn btn-neutral" title="UPSERT a Lead (by custom field)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../upsert-a-lead-by-custom-field/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../3.-people/see-a-persons-activities/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
