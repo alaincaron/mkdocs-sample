@@ -12,7 +12,7 @@ edit the doc
 push to master branch
 
 mkdocs build build the documentation under the site directory
-mkdocs gh-deploy deploys the branch to corresponding [github page)[https://alaincaron.github.io/mkdocs-sample/]
+mkdocs gh-deploy deploys the branch to corresponding [github page](https://alaincaron.github.io/mkdocs-sample/)
 
 mkdocs also support deploying to S3 or any other hosting site
 
