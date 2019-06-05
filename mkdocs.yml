@@ -91,4 +91,5 @@ nav:
      - Remove relationship between record and Entity: related-items/remove-relationship-between-record-and-entity.md
      - View all records of a given Entity Type related to an Entity: related-items/view-all-records-of-a-given-entity-type-related-to-an-entity.md
 
-theme: readthedocs
+theme:
+  name: 'material'
