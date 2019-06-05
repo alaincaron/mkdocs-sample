@@ -1,502 +1,458 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Remove relationship between record and Entity - Copper API</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Remove relationship between record and Entity - Copper API</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Remove relationship between record and Entity";
-    var mkdocs_page_input_path = "related-items/remove-relationship-between-record-and-entity.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
 
-<body class="wy-body-for-nav" role="document">
+    <body>
 
-  <div class="wy-grid-for-nav">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Copper API</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Copper API</a>
+                </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Account and Users</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../1.-account-and-users/list-users/">List Users</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Leads</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/convert-a-lead/">Convert a Lead</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/create-a-new-lead/">Create a New Lead</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/fetch-a-lead-by-id/">Fetch a Lead by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/list-lead-statuses/">List Lead Statuses</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/see-a-leads-activities/">See a Lead's Activities</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/list-customer-sources/">List Customer Sources</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/update-a-lead/">Update a Lead</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/delete-a-lead/">Delete a Lead</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/upsert-a-lead/">UPSERT a Lead</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../2.-leads/list-leads-search/">List Leads (Search)</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">People</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../3.-people/see-a-persons-activities/">See a Person's Activities</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/list-people-search/">List People (Search)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/create-a-new-person/">Create a New Person</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/list-contact-types/">List Contact Types</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/update-a-person/">Update a Person</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../3.-people/delete-a-person/">Delete a Person</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Companies</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/delete-a-company/">Delete a Company</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/update-a-company/">Update a Company</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/list-contact-types/">List Contact Types</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/create-a-new-company/">Create a New Company</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/see-a-companys-activities/">See a Company's Activities</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../4.-companies/list-companies-search/">List Companies (Search)</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Opportunities</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-pipelines/">List Pipelines</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-customer-sources/">List Customer Sources</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Projects</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../6.-projects/create-a-new-project/">Create a New Project</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../6.-projects/delete-a-project/">Delete a Project</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../6.-projects/update-a-project/">Update a Project</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../6.-projects/fetch-a-project-by-id/">Fetch a Project by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../6.-projects/list-projects-search/">List Projects (Search)</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Custom Fields</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Connect fields</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
-                </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
-                </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../custom-fields/connect-fields/create-a-connection/">Create a connection</a>
-                </li>
-    </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Tasks</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../7.-tasks/list-tasks-search/">List Tasks (Search)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../7.-tasks/create-a-new-task/">Create a New Task</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../7.-tasks/update-a-task/">Update a Task</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../7.-tasks/delete-a-task/">Delete a Task</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Activities</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../8. Activities/List Activity Types/">List Activity Types</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../8. Activities/Fetch an Activity by ID/">Fetch an Activity By ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../8. Activities/Create a New Activity/">Create a New Activity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../8. Activities/Delete an Activity/">Delete an Activity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../8. Activities/List Activities (Search)/">List Activities (Search)</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Webhooks</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../webhooks/create-new-subscription/">Create new subscription</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../webhooks/view-subscription-by-id/">View subscription by ID</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../webhooks/notification-example/">Notification Example</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../webhooks/list-all-subscriptions/">List all subscriptions</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Related Items</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../view-all-records-related-to-an-entity/">View all records related to an Entity</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Remove relationship between record and Entity</a>
-    <ul class="subnav">
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account and Users <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../1.-account-and-users/fetch-account-details/">Fetch Account Details</a>
+</li>
+                                    
+<li >
+    <a href="../../1.-account-and-users/fetch-user-by-id/">Fetch User by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../1.-account-and-users/list-users/">List Users</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Leads <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2.-leads/convert-a-lead/">Convert a Lead</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/create-a-new-lead/">Create a New Lead</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/fetch-a-lead-by-id/">Fetch a Lead by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/list-lead-statuses/">List Lead Statuses</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/see-a-leads-activities/">See a Lead's Activities</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/list-customer-sources/">List Customer Sources</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/update-a-lead/">Update a Lead</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/delete-a-lead/">Delete a Lead</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/upsert-a-lead/">UPSERT a Lead</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/upsert-a-lead-by-custom-field/">UPSERT a Lead (by custom field)</a>
+</li>
+                                    
+<li >
+    <a href="../../2.-leads/list-leads-search/">List Leads (Search)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../3.-people/see-a-persons-activities/">See a Person's Activities</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/list-people-search/">List People (Search)</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/fetch-a-person-by-email/">Fetch a Person by Email</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/create-a-new-person/">Create a New Person</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/fetch-a-person-by-id/">Fetch a Person by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/list-contact-types/">List Contact Types</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/update-a-person/">Update a Person</a>
+</li>
+                                    
+<li >
+    <a href="../../3.-people/delete-a-person/">Delete a Person</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Companies <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../4.-companies/delete-a-company/">Delete a Company</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/fetch-a-company-by-id/">Fetch a Company by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/update-a-company/">Update a Company</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/list-contact-types/">List Contact Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/create-a-new-company/">Create a New Company</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/see-a-companys-activities/">See a Company's Activities</a>
+</li>
+                                    
+<li >
+    <a href="../../4.-companies/list-companies-search/">List Companies (Search)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opportunities <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../5.-opportunities/list-opportunities-search/">List Opportunities (Search)</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/list-pipeline-stages/">List Pipeline Stages</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/create-a-new-opportunity/">Create a New Opportunity</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/list-pipelines/">List Pipelines</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/list-customer-sources/">List Customer Sources</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/search-opportunities-by-name/">Search Opportunities by Name</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/update-an-opportunity/">Update an Opportunity</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/delete-an-opportunity/">Delete an Opportunity</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/fetch-an-opportunity-by-id/">Fetch an Opportunity by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/list-loss-reasons/">List Loss Reasons</a>
+</li>
+                                    
+<li >
+    <a href="../../5.-opportunities/list-stages-in-a-pipeline/">List Stages in a Pipeline</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../6.-projects/create-a-new-project/">Create a New Project</a>
+</li>
+                                    
+<li >
+    <a href="../../6.-projects/delete-a-project/">Delete a Project</a>
+</li>
+                                    
+<li >
+    <a href="../../6.-projects/update-a-project/">Update a Project</a>
+</li>
+                                    
+<li >
+    <a href="../../6.-projects/fetch-a-project-by-id/">Fetch a Project by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../6.-projects/list-projects-search/">List Projects (Search)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Custom Fields <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../custom-fields/general/list-all-custom-activity-types/">List All Custom Activity Types</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/search-entity-leads-people-etc-by-custom-field/">Search Entity (Leads, People, etc/ by Custom Field</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/delete-a-custom-field-definition/">Delete a Custom Field Definition</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/list-custom-field-definitions/">List Custom Field Definitions</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/update-an-existing-custom-field-definition/">Update an existing custom field definition</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/fetch-a-custom-field-definition/">Fetch a Custom Field Definition</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/get-custom-activity-type/">Get Custom Activity Type</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/create-a-new-custom-field-definition/">Create a new custom field definition</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/create-a-new-custom-activity-type/">Create a New Custom Activity Type</a>
+</li>
+                                    
+<li >
+    <a href="../../custom-fields/general/update-an-existing-custom-activity-type/">Update an Existing Custom Activity Type</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Connect fields</a>
+    <ul class="dropdown-menu">
             
-    <li class="toctree-l3"><a href="#remove-relationship-between-record-and-entity">Remove relationship between record and Entity</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#headers">Headers</a></li>
-        
-            <li><a class="toctree-l4" href="#body">Body</a></li>
-        
-            <li><a class="toctree-l4" href="#example-responses">Example Responses</a></li>
-        
-        </ul>
-    
-
+<li >
+    <a href="../../custom-fields/connect-fields/delete-a-connection/">Delete a connection</a>
+</li>
+            
+<li >
+    <a href="../../custom-fields/connect-fields/list-the-connections-on-specified-entity/">List the connections on specified entity</a>
+</li>
+            
+<li >
+    <a href="../../custom-fields/connect-fields/create-a-connection/">Create a connection</a>
+</li>
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
-                </li>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tasks <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../7.-tasks/list-tasks-search/">List Tasks (Search)</a>
+</li>
+                                    
+<li >
+    <a href="../../7.-tasks/create-a-new-task/">Create a New Task</a>
+</li>
+                                    
+<li >
+    <a href="../../7.-tasks/fetch-a-task-by-id/">Fetch a Task by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../7.-tasks/update-a-task/">Update a Task</a>
+</li>
+                                    
+<li >
+    <a href="../../7.-tasks/delete-a-task/">Delete a Task</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Activities <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../8. Activities/List Activity Types/">List Activity Types</a>
+</li>
+                                    
+<li >
+    <a href="../../8. Activities/Fetch an Activity by ID/">Fetch an Activity By ID</a>
+</li>
+                                    
+<li >
+    <a href="../../8. Activities/Create a New Activity/">Create a New Activity</a>
+</li>
+                                    
+<li >
+    <a href="../../8. Activities/Delete an Activity/">Delete an Activity</a>
+</li>
+                                    
+<li >
+    <a href="../../8. Activities/List Activities (Search)/">List Activities (Search)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Webhooks <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../webhooks/delete-subscription-unsubscribe/">Delete subscription (unsubscribe)</a>
+</li>
+                                    
+<li >
+    <a href="../../webhooks/create-new-subscription/">Create new subscription</a>
+</li>
+                                    
+<li >
+    <a href="../../webhooks/view-subscription-by-id/">View subscription by ID</a>
+</li>
+                                    
+<li >
+    <a href="../../webhooks/notification-example/">Notification Example</a>
+</li>
+                                    
+<li >
+    <a href="../../webhooks/list-all-subscriptions/">List all subscriptions</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Items <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../relate-an-existing-record-to-an-entity/">Relate an existing record to an Entity</a>
+</li>
+                                    
+<li >
+    <a href="../view-all-records-related-to-an-entity/">View all records related to an Entity</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Remove relationship between record and Entity</a>
+</li>
+                                    
+<li >
+    <a href="../view-all-records-of-a-given-entity-type-related-to-an-entity/">View all records of a given Entity Type related to an Entity</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../view-all-records-related-to-an-entity/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../view-all-records-of-a-given-entity-type-related-to-an-entity/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#remove-relationship-between-record-and-entity">Remove relationship between record and Entity</a></li>
+            <li><a href="#headers">Headers</a></li>
+            <li><a href="#body">Body</a></li>
+            <li><a href="#example-responses">Example Responses</a></li>
     </ul>
-	    </li>
-          
-        </ul>
-      </div>
-      &nbsp;
-    </nav>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Copper API</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Related Items &raquo;</li>
-        
-      
-    
-    <li>Remove relationship between record and Entity</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="remove-relationship-between-record-and-entity">Remove relationship between record and Entity</h1>
+<h1 id="remove-relationship-between-record-and-entity">Remove relationship between record and Entity</h1>
 <p>Removing the relationship does not cause any of the records involved to be deleted from the system.</p>
 <p><code>DELETE {{base_url}}/{{entity}}/{{entity_id}}/related</code></p>
 <h2 id="headers">Headers</h2>
@@ -551,53 +507,83 @@
 </ul>
 <p>200: OK</p>
 <pre><code class="javascript">{&quot;removed&quot;:true,&quot;resource&quot;:{&quot;id&quot;:2827700,&quot;type&quot;:&quot;opportunity&quot;}}
-</code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../view-all-records-of-a-given-entity-type-related-to-an-entity/" class="btn btn-neutral float-right" title="View all records of a given Entity Type related to an Entity">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../view-all-records-related-to-an-entity/" class="btn btn-neutral" title="View all records related to an Entity"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
+</code></pre></div>
         </div>
-      </div>
 
-    </section>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../view-all-records-related-to-an-entity/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../view-all-records-of-a-given-entity-type-related-to-an-entity/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
 
-</body>
+    </body>
 </html>
